@@ -14,3 +14,4 @@ In the command line: <br/>
  * `cdk destroy` -> deletes stack (deployed not local)
  * `cdk diff` -> compares local and deployed stack
  * `cdk synth` -> generates CloudFormation (cfn) templates
+   * ex. `cdk synth --output=./templates`
