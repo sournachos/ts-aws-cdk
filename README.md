@@ -11,3 +11,6 @@ In the command line: <br/>
  * `cdk deploy` -> deploys cdk stack.
  * `cdk bootstrap` -> bootstraps aws env.
  * `cdk init <Template> --language <LANGUAGE>` -> creates new CDK app
+ * `cdk destroy` -> deletes stack (deployed not local)
+ * `cdk diff` -> compares local and deployed stack
+ * `cdk synth` -> generates CloudFormation (cfn) templates
