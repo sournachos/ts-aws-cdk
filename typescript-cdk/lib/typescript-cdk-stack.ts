@@ -1,6 +1,7 @@
 import { Construct } from 'constructs';
 import { Stack, StackProps, CfnOutput } from 'aws-cdk-lib';
 import {aws_s3 as s3} from 'aws-cdk-lib';
+import { Networking } from "./networking";
 
 export class TypescriptCdkStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
@@ -14,6 +15,10 @@ export class TypescriptCdkStack extends Stack {
       value: bucket.bucketName,
       exportName: "DocumentsBucketName"
     });
+
+    new Networking(this, "NetworkingVonstruct", {
+      maxAzs: 2
+    })
 
   }
 }
