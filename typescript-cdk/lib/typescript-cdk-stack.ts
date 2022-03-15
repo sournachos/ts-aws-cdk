@@ -16,9 +16,11 @@ export class TypescriptCdkStack extends Stack {
       exportName: "DocumentsBucketName"
     });
 
-    new Networking(this, "NetworkingVonstruct", {
+    const neworkingStack = new Networking(this, "NetworkingVonstruct", {
       maxAzs: 2
     })
+
+    cdk.Tags.of(neworkingStack).add('Module', 'Networking')
 
   }
 }
